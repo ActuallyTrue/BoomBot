@@ -27,11 +27,13 @@ public class PlayerLaunchState : PlayerState
 
     public override void Update(PlayerStateInput stateInput)
     {   
+        stateInput.playerController.isGrounded = stateInput.playerController.checkIfGrounded();
+
         if (stateInput.playerController.canAct == false) {
             return;
         }
         timer -= Time.deltaTime;   
-        if (timer <= 0) {
+        if (timer <= 0 && stateInput.playerController.isGrounded) {
             character.ChangeState<PlayerIdleState>();
         } 
     }

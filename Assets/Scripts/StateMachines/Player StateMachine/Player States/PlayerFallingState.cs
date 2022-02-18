@@ -31,6 +31,12 @@ public class PlayerFallingState : PlayerState {
             return;
         }
 
+        if (stateInput.player.GetButtonDown("Blast"))
+        {
+            stateInput.playerController.Blast();
+            character.ChangeState<PlayerLaunchState>();
+        }
+
         if (jumpGraceTimer >= 0) {
 
             if (stateInput.player.GetButtonDown("Jump"))
