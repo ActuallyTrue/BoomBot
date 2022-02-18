@@ -20,6 +20,12 @@ public class PlayerJumpingState : PlayerState {
             return;
         }
 
+        if (stateInput.player.GetButtonDown("Blast"))
+        {
+            stateInput.playerController.Blast();
+            character.ChangeState<PlayerLaunchState>();
+        }
+
         if (stateInput.rb.velocity.y <= 0)
         {
             character.ChangeState<PlayerFallingState>(new PlayerFallingTransitionInfo(false));

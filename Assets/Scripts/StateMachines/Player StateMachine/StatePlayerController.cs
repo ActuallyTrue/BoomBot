@@ -118,7 +118,6 @@ public class StatePlayerController : MonoBehaviour
         int layerMask = 1 << 6;
         if (Physics.Raycast(groundChecker.transform.position, Vector3.down, out hit, 1f, layerMask))
         {
-            Debug.Log("I got hit!");
             if (hit.collider.gameObject.layer == 6) { //the ground layer
                 return true;
             }
@@ -148,7 +147,7 @@ public class StatePlayerController : MonoBehaviour
     {
         moveInput = player.GetAxis2D("MoveHorizontal", "MoveVertical");
         Vector3 velocity = CalculatePlayerVelocity(rb.velocity, moveInput, moveSpeed, velocityXSmoothing, velocityZSmoothing, accelerationTime);
-        rb.velocity = Vector3.Lerp(rb.velocity, velocity, 1f * Time.deltaTime);
+        rb.velocity = Vector3.Lerp(rb.velocity, velocity, 10f * Time.deltaTime);
     }
 
     public Vector2 clampTo8Directions(Vector2 vectorToClamp) {
