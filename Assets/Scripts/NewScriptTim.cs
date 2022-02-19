@@ -2,7 +2,7 @@ public class NewScriptTim : MonoBehaviour
 {
   void Start()
   {
-    print("Hello");
+    print("Hello world");
   }
 
   void Update()
