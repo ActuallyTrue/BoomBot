@@ -9,6 +9,7 @@ using Cinemachine;
 public class StatePlayerController : MonoBehaviour
 {
     public float moveSpeed = 6f;
+    public float turnSpeed = 3f;
     public float blastForce = 15f;
     public float gravityScale;
     public float accelerationTime;
@@ -140,6 +141,18 @@ public class StatePlayerController : MonoBehaviour
         if (rb != null) {
             Vector3 velocity = CalculatePlayerVelocity(rb.velocity, moveInput, moveSpeed, velocityXSmoothing, velocityZSmoothing, accelerationTime);
             rb.velocity = velocity;
+        }
+        HandleRotation();
+    }
+
+    public void HandleRotation()
+    {
+        if (rb.velocity != Vector3.zero)
+        {
+            Vector3 movementDir = rb.velocity;
+            movementDir = new Vector3(movementDir.x, 0, movementDir.z);
+             Quaternion toRotation = Quaternion.LookRotation(movementDir, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, turnSpeed * Time.deltaTime);
         }
     }
 
