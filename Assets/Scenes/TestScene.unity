@@ -189,7 +189,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149783463}
-  m_LocalRotation: {x: 0.0015733076, y: -0.9844447, z: 0.1754661, w: 0.008827175}
+  m_LocalRotation: {x: 0.0015733106, y: -0.9844447, z: 0.1754661, w: 0.008827192}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -641,6 +641,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rewired Input Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3096615582835831402, guid: c7c05f32d53757048a22ceccd615269f, type: 3}
+      propertyPath: _userData.keyboardMapIdCounter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096615582835831402, guid: c7c05f32d53757048a22ceccd615269f, type: 3}
+      propertyPath: _userData.keyboardMaps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c05f32d53757048a22ceccd615269f, type: 3}
 --- !u!1 &615658174
@@ -887,7 +895,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.0015733438, y: 0.9844447, z: -0.17546615, w: -0.008827173}
+  m_LocalRotation: {x: -0.0015733498, y: 0.9844447, z: -0.17546615, w: -0.008827207}
   m_LocalPosition: {x: -0.0045223823, y: 2.553379, z: -0.35639822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
