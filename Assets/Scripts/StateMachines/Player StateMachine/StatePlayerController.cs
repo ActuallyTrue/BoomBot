@@ -19,6 +19,9 @@ public class StatePlayerController : MonoBehaviour
     public float maxJumpVelocity;
     public float minJumpVelocity;
     public Vector2 launchVelocity;
+    public float explosionForce = 10f;
+    public float explosionRadius = 5f;
+    public float explosionUpForce = 1f;
 
     [HideInInspector]
     public Vector2 moveInput;
@@ -62,6 +65,8 @@ public class StatePlayerController : MonoBehaviour
         boxCollider = GetComponent<BoxCollider>();
         camera = Camera.main;
         gravity = Physics.gravity * gravityScale;
+        // TODO: delete, to show that Detonate works
+        Invoke("Detonate", 2f);
     }
 
     public void FixedUpdate() {
@@ -244,4 +249,22 @@ public class StatePlayerController : MonoBehaviour
     public void pushBack(Vector2 input) {
         rb.AddForce(new Vector2(input.x * -50, input.y * -50), ForceMode.Force);
     }
+
+    /**
+     * explosions that affect the world
+     * https://www.youtube.com/watch?v=XMDfhHyOacM
+     */
+    void Detonate()
+    {
+        Vector3 explosionPosition = this.transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
+        foreach (Collider hit in colliders)
+        {
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+            if (rb != null && hit.CompareTag("Explodable"))
+            {
+                rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius, explosionUpForce, ForceMode.Impulse);
+            }
+        }
+    } 
 }
