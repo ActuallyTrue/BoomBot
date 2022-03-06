@@ -6,7 +6,7 @@ public class PlayerIdleState : PlayerState {
 
     public override void Enter(PlayerStateInput stateInput, CharacterStateTransitionInfo transitionInfo = null)
     {
-        stateInput.anim.Play("Player_idle");
+        stateInput.anim.Play("Player_Idle");
     }
 
     public override void Update(PlayerStateInput stateInput)
