@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewScript : MonoBehaviour
+public class destroy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        print("BoomBot says hello");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       if (Input.GetKey(KeyCode.Backspace))
+        {
+            Destroy(gameObject);
+        } 
     }
 }
