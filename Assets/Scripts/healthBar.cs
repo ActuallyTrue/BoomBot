@@ -6,6 +6,8 @@ public class healthBar : MonoBehaviour
 {
     public health health;
     public Slider slider;
+    public Gradient gradient;
+    public Image img;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class healthBar : MonoBehaviour
     // https://weeklyhow.com/how-to-make-a-health-bar-in-unity/
     public void updateHealth(int val)
     {
+        img.color = gradient.Evaluate(1f);
         slider.value = val;
     }
 }
