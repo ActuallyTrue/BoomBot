@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
+  blastForce: 15
   gravityScale: 3.5
   accelerationTime: 0
   moveAfterLaunchTime: 0
@@ -190,3 +191,4 @@ MonoBehaviour:
   health: 100
   invincibilityTime: 0
   canAct: 1
+  camera: {fileID: 0}

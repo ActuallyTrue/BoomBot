@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerJumpingState : PlayerState {
     public override void Enter(PlayerStateInput stateInput, CharacterStateTransitionInfo transitionInfo = null)
     {
-        //stateInput.anim.Play("Player_jump");
+        stateInput.anim.Play("Player_jump");
         //stateInput.lastXDir = 0;
     }
 
@@ -40,6 +40,6 @@ public class PlayerJumpingState : PlayerState {
 
     public override void FixedUpdate(PlayerStateInput stateInput)
     {
-        stateInput.playerController.HandleMovement();
+        stateInput.playerController.HandleMovementForce();
     }
 }

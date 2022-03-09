@@ -6,7 +6,7 @@ public class PlayerIdleState : PlayerState {
 
     public override void Enter(PlayerStateInput stateInput, CharacterStateTransitionInfo transitionInfo = null)
     {
-        stateInput.anim.Play("Player_idle");
+        stateInput.anim.Play("Player_Idle");
     }
 
     public override void Update(PlayerStateInput stateInput)
@@ -35,6 +35,7 @@ public class PlayerIdleState : PlayerState {
             character.ChangeState<PlayerLaunchState>(transitionInfo);
             return;
         }
+        stateInput.anim.SetFloat("speed", stateInput.playerController.getSpeed());
     }
 
 
