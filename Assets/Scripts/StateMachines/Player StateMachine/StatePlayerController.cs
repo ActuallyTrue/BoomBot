@@ -9,6 +9,7 @@ using Cinemachine;
 public class StatePlayerController : MonoBehaviour
 {
     public float moveSpeed = 6f;
+    public float forcePower = 3f;
     public float turnSpeed = 3f;
     public float blastForce = 15f;
     public float gravityScale;
@@ -31,7 +32,9 @@ public class StatePlayerController : MonoBehaviour
 
     public GameObject groundChecker;
     public bool isGrounded;
-    private Vector3 gravity;
+
+    [HideInInspector]
+    public Vector3 gravity;
 
     public float jumpGraceTime;
 
@@ -61,6 +64,7 @@ public class StatePlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerManager = GetComponent<PlayerManager>();
         boxCollider = GetComponent<BoxCollider>();
+        anim = GetComponent<Animator>();
         camera = Camera.main;
         gravity = Physics.gravity * gravityScale;
     }
@@ -68,7 +72,6 @@ public class StatePlayerController : MonoBehaviour
     public void FixedUpdate() {
         if (isGrounded == false)
         {
-            Debug.Log(gravity);
             rb.AddForce(gravity, ForceMode.Acceleration);
         }
     }
@@ -114,6 +117,12 @@ public class StatePlayerController : MonoBehaviour
         return output;
     }
 
+    public float getSpeed()
+    {
+        Vector2 speed = new Vector2(rb.velocity.x, rb.velocity.z);
+        return speed.magnitude;
+    }
+
     public bool checkIfGrounded() {
         RaycastHit hit;
         int layerMask = 1 << 6;
@@ -142,14 +151,42 @@ public class StatePlayerController : MonoBehaviour
             Vector3 velocity = CalculatePlayerVelocity(rb.velocity, moveInput, moveSpeed, velocityXSmoothing, velocityZSmoothing, accelerationTime);
             rb.velocity = velocity;
         }
-        HandleRotation();
+        if (moveInput.x > 0 || moveInput.y > 0)
+        {
+            HandleRotation(rb.velocity);
+        }
+        
     }
 
-    public void HandleRotation()
+    public void HandleMovementForce()
+    {
+        moveInput = player.GetAxis2D("MoveHorizontal", "MoveVertical");
+        if (rb != null) {
+            //camera forward and right vectors:
+            Vector3 forward = camera.transform.forward;
+            Vector3 right = camera.transform.right;
+    
+            //project forward and right vectors on the horizontal plane (y = 0)
+            forward.y = 0f;
+            right.y = 0f;
+            forward.Normalize();
+            right.Normalize();
+            Vector3 targetDir = forward * (moveInput.y * forcePower) + right * (moveInput.x * forcePower);
+
+            rb.AddForce(targetDir, ForceMode.Acceleration);
+
+            if (moveInput.x > 0 || moveInput.y > 0)
+            {
+                HandleRotation(targetDir);
+            }
+        }
+        
+    }
+
+    public void HandleRotation(Vector3 movementDir)
     {
         if (rb.velocity != Vector3.zero)
         {
-            Vector3 movementDir = rb.velocity;
             movementDir = new Vector3(movementDir.x, 0, movementDir.z);
              Quaternion toRotation = Quaternion.LookRotation(movementDir, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, turnSpeed * Time.deltaTime);
