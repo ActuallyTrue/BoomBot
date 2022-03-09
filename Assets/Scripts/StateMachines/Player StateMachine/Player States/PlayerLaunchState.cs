@@ -37,7 +37,7 @@ public class PlayerLaunchState : PlayerState
         }
         timer -= Time.deltaTime;
 
-        if (stateInput.rb.velocity.y < 0f && stateInput.rb.velocity.y > -5f)
+        if (timer <= 0 && stateInput.rb.velocity.y < 0f && stateInput.rb.velocity.y > -5f)
         {
             stateInput.playerController.gravity = Physics.gravity * (stateInput.playerController.gravityScale / 5);
             if (stopped == false)
@@ -50,7 +50,7 @@ public class PlayerLaunchState : PlayerState
         {
             stateInput.playerController.gravity = Physics.gravity * (stateInput.playerController.gravityScale);
         }
-        if (stateInput.playerController.isGrounded) {
+        if (timer <= 0 && stateInput.playerController.isGrounded) {
             character.ChangeState<PlayerIdleState>();
         } 
     }
@@ -61,6 +61,7 @@ public class PlayerLaunchState : PlayerState
 
     public override void ForceCleanUp(PlayerStateInput stateInput)
     {
+        stateInput.playerController.gravity = Physics.gravity * (stateInput.playerController.gravityScale);
     }
 
 }

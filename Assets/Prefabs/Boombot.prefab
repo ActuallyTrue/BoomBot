@@ -3295,10 +3295,10 @@ MonoBehaviour:
   moveSpeed: 6
   forcePower: 3
   turnSpeed: 720
-  blastForce: 20
+  blastForce: 35
   gravityScale: 3.5
   accelerationTime: 0
-  moveAfterLaunchTime: 0
+  moveAfterLaunchTime: 0.75
   maxJumpVelocity: 15
   minJumpVelocity: 5
   launchVelocity: {x: 0, y: 0}
