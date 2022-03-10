@@ -70,8 +70,6 @@ public class StatePlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         camera = Camera.main;
         gravity = Physics.gravity * gravityScale;
-        // TODO: delete, to show that Detonate works
-        Invoke("Detonate", 2f);
     }
 
     public void FixedUpdate() {
@@ -91,7 +89,15 @@ public class StatePlayerController : MonoBehaviour
 
     public void Blast()
     {
-        rb.AddForce(camera.transform.forward * blastForce, ForceMode.Impulse);
+        float scale = 1f;
+        if (!Input.GetKey(KeyCode.LeftShift))
+        {
+            rb.AddForce(camera.transform.forward * blastForce, ForceMode.Impulse);
+        } else
+        {
+            scale = 1.5f;
+        }
+        Detonate(scale);
     }
 
     public void JumpRelease()
@@ -304,16 +310,17 @@ public class StatePlayerController : MonoBehaviour
      * explosions that affect the world
      * https://www.youtube.com/watch?v=XMDfhHyOacM
      */
-    void Detonate()
+    void Detonate(float scale = 1)
     {
         Vector3 explosionPosition = this.transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
+        Debug.Log(explosionForce);
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null && hit.CompareTag("Explodable"))
             {
-                rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius, explosionUpForce, ForceMode.Impulse);
+                rb.AddExplosionForce(explosionForce * scale, explosionPosition, explosionRadius, explosionUpForce, ForceMode.Impulse);
             }
         }
     } 
