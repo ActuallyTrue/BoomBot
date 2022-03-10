@@ -9,6 +9,8 @@ public class PlayerLaunchState : PlayerState
 {
     private float launchTime = 0.5f;
     private float timer;
+    
+    private bool stopped;
 
 
     public override void Enter(PlayerStateInput stateInput, CharacterStateTransitionInfo transitionInfo = null)
@@ -23,6 +25,7 @@ public class PlayerLaunchState : PlayerState
         }
         //stateInput.anim.Play("Player_Jump");
         stateInput.anim.Play("Player_fall");
+        stopped = false;
     }
 
     public override void Update(PlayerStateInput stateInput)
@@ -32,21 +35,33 @@ public class PlayerLaunchState : PlayerState
         if (stateInput.playerController.canAct == false) {
             return;
         }
-        timer -= Time.deltaTime;   
+        timer -= Time.deltaTime;
+
+        if (timer <= 0 && stateInput.rb.velocity.y < 0f && stateInput.rb.velocity.y > -5f)
+        {
+            stateInput.playerController.gravity = Physics.gravity * (stateInput.playerController.gravityScale / 5);
+            if (stopped == false)
+            {
+                stopped = true;
+                stateInput.playerController.rb.velocity = new Vector3(0, stateInput.playerController.rb.velocity.y, 0);
+            }
+        }
+        else
+        {
+            stateInput.playerController.gravity = Physics.gravity * (stateInput.playerController.gravityScale);
+        }
         if (timer <= 0 && stateInput.playerController.isGrounded) {
             character.ChangeState<PlayerIdleState>();
         } 
     }
     public override void FixedUpdate(PlayerStateInput stateInput)
     {
-        if (timer <= 0)
-        {
-            stateInput.playerController.HandleLerpMovement();
-        }
+        stateInput.playerController.HandleMovementForce();
     }
 
     public override void ForceCleanUp(PlayerStateInput stateInput)
     {
+        stateInput.playerController.gravity = Physics.gravity * (stateInput.playerController.gravityScale);
     }
 
 }
