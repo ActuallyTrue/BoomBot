@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -162,7 +163,7 @@ public class StatePlayerController : MonoBehaviour
             Vector3 velocity = CalculatePlayerVelocity(rb.velocity, moveInput, moveSpeed, velocityXSmoothing, velocityZSmoothing, accelerationTime);
             rb.velocity = velocity;
         }
-        if (moveInput.x > 0 || moveInput.y > 0)
+        if (Math.Abs(moveInput.x) > 0 || Math.Abs(moveInput.y) > 0)
         {
             HandleRotation(rb.velocity);
         }
@@ -186,7 +187,7 @@ public class StatePlayerController : MonoBehaviour
 
             rb.AddForce(targetDir, ForceMode.Acceleration);
 
-            if (moveInput.x > 0 || moveInput.y > 0)
+            if (Math.Abs(moveInput.x) > 0 || Math.Abs(moveInput.y) > 0)
             {
                 HandleRotation(targetDir);
             }
