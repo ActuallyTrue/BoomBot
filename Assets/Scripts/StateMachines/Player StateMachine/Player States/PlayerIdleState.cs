@@ -35,6 +35,7 @@ public class PlayerIdleState : PlayerState {
             character.ChangeState<PlayerLaunchState>(transitionInfo);
             return;
         }
+        stateInput.anim.SetFloat("speed", stateInput.playerController.getSpeed());
     }
 
 
