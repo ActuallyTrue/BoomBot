@@ -20,6 +20,7 @@ public class healthBar : MonoBehaviour
 
     // Update is called once per frame
     // https://weeklyhow.com/how-to-make-a-health-bar-in-unity/
+    //https://opengameart.org/content/heart-2
     public void updateHealth(int val)
     {
         img.color = gradient.Evaluate(1f);
