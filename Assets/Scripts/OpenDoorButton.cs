@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class OpenDoorButton : MonoBehaviour
 {
-    public GameObject[] numButtons;
+    public GameObject buttons;
 
     private Animator anim;
+    private bool alreadyEntered = false;
+    private bool alreadyExited = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,26 +19,23 @@ public class OpenDoorButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnTriggerEnter(Collider c) {
-        if (c.attachedRigidbody != null) {
-            CanActivateButton object = c.attachedRigidbody.gameObject.GetComponent<CanActivateButton>();
-            if (object != null) {
-                anim.SetBool("open", true);
-                anim.SetBool("close", false);
-            }
+        ActivateButton button = (ActivateButton) buttons.GetComponent(typeof(ActivateButton));
+        if (button.getActivatedEnter() && !alreadyEntered) {
+            print("here!");
+            alreadyEntered = true;
+            anim.SetBool("open", true);
+            anim.SetBool("close", false);
+            button.setActivatedEnter();
+        } else {
+            alreadyEntered = false;
         }
-    }
-
-    void OnTriggerExit(Collider c) {
-        if (c.attachedRigidbody != null) {
-            CanActivateButton object = c.attachedRigidbody.gameObject.GetComponent<CanActivateButton>();
-            if (object != null) {
-                anim.SetBool("open", false);
-                anim.SetBool("close", true);
-            }
+        if (button.getActivatedExit() && !alreadyExited) {
+            alreadyExited = true;
+            anim.SetBool("open", false);
+            anim.SetBool("close", true);
+            button.setActivatedExit();
+        } else {
+            alreadyExited = false;
         }
     }
 }
