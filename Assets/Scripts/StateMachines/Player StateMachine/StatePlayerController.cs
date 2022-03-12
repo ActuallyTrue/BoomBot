@@ -98,6 +98,7 @@ public class StatePlayerController : MonoBehaviour
             scale = 1.5f;
         }
         Detonate(scale);
+        EventManager.TriggerEvent<Vector3>("explosionEvent", this.transform.position);
     }
 
     public void JumpRelease()
