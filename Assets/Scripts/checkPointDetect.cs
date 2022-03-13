@@ -20,7 +20,7 @@ public class checkPointDetect : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(transform.position + "pos");
+            Debug.Log("CHECKPOINT");
             chkPt.lastCheckpoint = transform.position;
         }
     }
