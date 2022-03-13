@@ -25,9 +25,18 @@ public class ActivateButton : MonoBehaviour
         EventManager.TriggerEvent<Vector3>("buttonClickAudio", this.transform.position);
     }
 
-    void OnTriggerEnter(Collider c) {
-        if (c.attachedRigidbody != null) {
-            CanActivateButton collidingObject = c.attachedRigidbody.gameObject.GetComponent<CanActivateButton>();
+    // void OnTriggerEnter(Collider c) {
+    //     if (c.attachedRigidbody != null) {
+    //         CanActivateButton collidingObject = c.attachedRigidbody.gameObject.GetComponent<CanActivateButton>();
+    //         if (collidingObject != null) {
+    //             isActivatedEnter = true;
+    //         }
+    //     }
+    // }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.attachedRigidbody != null) {
+            CanActivateButton collidingObject = other.attachedRigidbody.gameObject.GetComponent<CanActivateButton>();
             if (collidingObject != null) {
                 isActivatedEnter = true;
             }

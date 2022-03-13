@@ -140,9 +140,12 @@ public class StatePlayerController : MonoBehaviour
     public bool checkIfGrounded() {
         RaycastHit hit;
         int layerMask = 1 << 6;
-        if (Physics.Raycast(groundChecker.transform.position, Vector3.down, out hit, 1f, layerMask))
+        //for later
+        //Physics.Raycast(groundChecker.transform.position, Vector3.down, out hit, 1f, layerMask)
+        Collider[] colliderArray = Physics.OverlapSphere(groundChecker.transform.position, 0.7f, layerMask);
+        foreach (Collider col in colliderArray)
         {
-            if (hit.collider.gameObject.layer == 6) { //the ground layer
+            if (col.gameObject.layer == 6) { //the ground layer
                 return true;
             }
         }

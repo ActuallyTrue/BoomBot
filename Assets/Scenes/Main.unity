@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -538,6 +538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -684,6 +688,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -1646,6 +1654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &155957904 stripped
@@ -1707,6 +1719,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -2060,6 +2076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &183453962 stripped
@@ -2411,6 +2431,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -2847,6 +2871,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -3386,7 +3414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 287651891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3496,7 +3524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319775576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3565,7 +3593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 352532642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3840,6 +3868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &355846017 stripped
@@ -3927,6 +3959,10 @@ PrefabInstance:
     - target: {fileID: 5843776970775127865, guid: a17ecf5ba84416b46b8279e56ddf63e7, type: 3}
       propertyPath: m_Name
       value: Chamber_Ceiling_02_snaps012 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843776970775127865, guid: a17ecf5ba84416b46b8279e56ddf63e7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5843776970775127869, guid: a17ecf5ba84416b46b8279e56ddf63e7, type: 3}
       propertyPath: m_RootOrder
@@ -4081,7 +4117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368303983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4270,6 +4306,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -4671,7 +4711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462429401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4816,6 +4856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4888,7 +4932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483927396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4921,6 +4965,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -5331,6 +5379,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -5777,6 +5829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &542303566 stripped
@@ -6082,6 +6138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6221,6 +6281,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -6414,6 +6478,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -6857,6 +6925,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -7761,8 +7833,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700719476}
-  m_LocalRotation: {x: -0.049815584, y: 0.86313915, z: -0.08687537, w: -0.49493635}
-  m_LocalPosition: {x: 192.53955, y: 2.38, z: 103.63675}
+  m_LocalRotation: {x: -0.04981558, y: 0.86313915, z: -0.086875364, w: -0.49493635}
+  m_LocalPosition: {x: 192.53955, y: 2.968, z: 103.63675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 89119096}
@@ -9254,7 +9326,7 @@ GameObject:
   - component: {fileID: 795409529}
   - component: {fileID: 795409528}
   - component: {fileID: 795409527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9834,6 +9906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9951,6 +10027,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -10988,7 +11068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914953439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11172,6 +11252,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -11948,6 +12032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &964339463 stripped
@@ -12071,6 +12159,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -12259,6 +12351,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -12839,6 +12935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &999079346 stripped
@@ -12860,6 +12960,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -13513,6 +13617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1009293385 stripped
@@ -13527,9 +13635,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 914953439}
     m_Modifications:
+    - target: {fileID: 2064143582687433429, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252557942391233827, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2895679653754251680, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
       propertyPath: m_Name
       value: Wall_Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895679653754251680, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7829914731958448805, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13539,6 +13659,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3b1902cf581e782438ddf0a88d2fcf50, type: 2}
+    - target: {fileID: 8124536561803417883, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8799853431570535397, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -13599,6 +13723,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 3d2110dabe6f73043ba4404830e26f36, type: 2}
+    - target: {fileID: 9029106645192176099, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c43c82bd9d2b444ba0db89d178de38f, type: 3}
 --- !u!4 &1010713430 stripped
@@ -13660,6 +13788,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -13819,6 +13951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -13888,6 +14024,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -14103,6 +14243,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -14390,6 +14534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1063649781 stripped
@@ -14487,6 +14635,10 @@ PrefabInstance:
     - target: {fileID: 1117106642210389383, guid: c7c05f32d53757048a22ceccd615269f, type: 3}
       propertyPath: m_Name
       value: Rewired Input Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117106642210389383, guid: c7c05f32d53757048a22ceccd615269f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c05f32d53757048a22ceccd615269f, type: 3}
@@ -15625,7 +15777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197637584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16425,6 +16577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1254049586 stripped
@@ -16792,6 +16948,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -17322,6 +17482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1328632958 stripped
@@ -17338,7 +17502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1332697020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18003,6 +18167,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -18940,6 +19108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1508087517 stripped
@@ -19002,6 +19174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1511415215 stripped
@@ -19018,7 +19194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1521054984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19118,6 +19294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1523160935 stripped
@@ -19134,7 +19314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1523163169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19871,7 +20051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1558818594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19909,6 +20089,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -20621,6 +20805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012
       objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
 --- !u!4 &1619349101 stripped
@@ -20785,7 +20973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1639401183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21236,6 +21424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012
       objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -21444,7 +21636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671190987}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22175,6 +22367,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -23277,7 +23473,7 @@ PrefabInstance:
       objectReference: {fileID: 1367514732}
     - target: {fileID: 1122024874006496339, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.49575865
+      value: 0.4957587
       objectReference: {fileID: 0}
     - target: {fileID: 1122024874006496339, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.x
@@ -23289,23 +23485,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122024874006496339, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.071202464
+      value: 0.07120244
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358569345919228863, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49493638
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358569345919228863, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.049815413
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358569345919228863, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.86313915
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358569345919228863, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.086875446
       objectReference: {fileID: 0}
     - target: {fileID: 4517942687120654197, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.4939484
+      value: -0.49394837
       objectReference: {fileID: 0}
     - target: {fileID: 4517942687120654197, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.05880998
+      value: -0.058810003
       objectReference: {fileID: 0}
     - target: {fileID: 4517942687120654197, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.10256107
-      objectReference: {fileID: 0}
-    - target: {fileID: 6019215453526239500, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+      value: -0.10256106
       objectReference: {fileID: 0}
     - target: {fileID: 6019215453526239728, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_Name
@@ -23321,7 +23529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7337442726258924515, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: 0.468
       objectReference: {fileID: 0}
     - target: {fileID: 7337442726258924515, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23378,6 +23586,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -23456,6 +23668,10 @@ PrefabInstance:
     - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_Name
       value: Chamber_Wall_snaps012 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828510560553273507, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8828510560553273510, guid: be6ad246f277c824db9559ff098ac85d, type: 3}
       propertyPath: m_RootOrder
@@ -23662,6 +23878,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -24014,7 +24234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908376823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24188,6 +24408,10 @@ PrefabInstance:
     - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_02_snaps012 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355898060279496359, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4713059301239007112, guid: 6584e99601e97be4b9e6f6b106f80408, type: 3}
       propertyPath: m_RootOrder
@@ -24568,6 +24792,10 @@ PrefabInstance:
     - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
       propertyPath: m_Name
       value: Chamber_Floor_01_snaps012 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675586700599482513, guid: 551517dc34967434180c1286b181797f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551517dc34967434180c1286b181797f, type: 3}
@@ -25274,7 +25502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2037562071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

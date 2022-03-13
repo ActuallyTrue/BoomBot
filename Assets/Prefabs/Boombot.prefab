@@ -3631,7 +3631,7 @@ MonoBehaviour:
   minJumpVelocity: 5
   launchVelocity: {x: 0, y: 0}
   explosionForce: 10
-  explosionRadius: 20
+  explosionRadius: 10
   explosionUpForce: 300
   moveInput: {x: 0, y: 0}
   playerId: 0
