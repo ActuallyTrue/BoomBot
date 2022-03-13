@@ -24,6 +24,15 @@ public class health : MonoBehaviour
         //}
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Projectile")
+        {
+            print("HIT");
+            reduceHealth(10);
+        }
+    }
+
     public void reduceHealth(int val)
     {
         currHealth -= val;
