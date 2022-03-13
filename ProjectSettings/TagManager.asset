@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerEyes
   - Explodable
+  - Projectile
   layers:
   - Default
   - TransparentFX
