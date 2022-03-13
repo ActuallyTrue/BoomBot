@@ -28,7 +28,6 @@ public class health : MonoBehaviour
     {
         if (other.tag == "Projectile")
         {
-            print("HIT");
             reduceHealth(10);
         }
     }
