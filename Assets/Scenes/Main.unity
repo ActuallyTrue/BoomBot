@@ -1301,6 +1301,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[1].slug
+      value: doorOpenAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[2].slug
+      value: buttonClickAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[3].slug
+      value: enemyPewAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[4].slug
+      value: doorCloseAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[0].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[1].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[3].volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[4].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cea4a72d0f50edd4fa0fd48dd798af25, type: 3}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d47b7a3fc0cc6674b8903324d009c2d6, type: 3}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[3].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 726272f3690af6549abf3250efd8000c, type: 3}
+    - target: {fileID: 5341391540281688990, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
+      propertyPath: audioEvents.Array.data[4].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c841ae24fff81648acc01c8f953d40f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa8671f0b73063a46b9424ef606228d6, type: 3}
 --- !u!1001 &123117691
@@ -22936,7 +22992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122024874006496339, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.86457306
+      value: -0.8645731
       objectReference: {fileID: 0}
     - target: {fileID: 1122024874006496339, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.z
@@ -22944,15 +23000,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4517942687120654197, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.4939484
+      value: -0.49394837
       objectReference: {fileID: 0}
     - target: {fileID: 4517942687120654197, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.05880998
+      value: -0.058809962
       objectReference: {fileID: 0}
     - target: {fileID: 4517942687120654197, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.10256107
+      value: -0.10256104
       objectReference: {fileID: 0}
     - target: {fileID: 6019215453526239500, guid: 71eaf4cd15e74e94faffdfac3e73dfab, type: 3}
       propertyPath: m_IsTrigger

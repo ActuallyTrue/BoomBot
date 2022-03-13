@@ -26,6 +26,7 @@ public class OpenDoorButton : MonoBehaviour
             anim.SetBool("open", true);
             anim.SetBool("close", false);
             button.setActivatedEnter();
+            EventManager.TriggerEvent<Vector3>("doorOpenAudio", this.transform.position);
         } else {
             alreadyEntered = false;
         }
@@ -34,7 +35,9 @@ public class OpenDoorButton : MonoBehaviour
             anim.SetBool("open", false);
             anim.SetBool("close", true);
             button.setActivatedExit();
-        } else {
+            EventManager.TriggerEvent<Vector3>("doorCloseAudio", this.transform.position);
+        }
+        else {
             alreadyExited = false;
         }
     }

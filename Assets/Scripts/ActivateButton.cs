@@ -17,10 +17,12 @@ public class ActivateButton : MonoBehaviour
 
     public void setActivatedEnter() {
         isActivatedEnter = false;
+        EventManager.TriggerEvent<Vector3>("buttonClickAudio", this.transform.position);
     }
 
     public void setActivatedExit() {
         isActivatedExit = false;
+        EventManager.TriggerEvent<Vector3>("buttonClickAudio", this.transform.position);
     }
 
     void OnTriggerEnter(Collider c) {

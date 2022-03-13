@@ -26,21 +26,23 @@ public class AudioManager : MonoBehaviour
     {
         public string slug;
         public AudioClip audioClip;
+        public float volume;
     }
     [SerializeField]
     public AudioEvent[] audioEvents;
     private Dictionary<string, UnityAction<Vector3>> listenersDictionary;
     void Awake()
     {
+        listenersDictionary = new Dictionary<string, UnityAction<Vector3>>();
         foreach (AudioEvent audioEvent in audioEvents)
         {
-            listenersDictionary = new Dictionary<string, UnityAction<Vector3>>();
             listenersDictionary.Add(audioEvent.slug, (Vector3 position) =>
             {
                 if (eventSound3DPrefab)
                 {
                     EventSound3D snd = Instantiate(eventSound3DPrefab, position, Quaternion.identity, null);
                     snd.audioSrc.clip = audioEvent.audioClip;
+                    snd.audioSrc.volume = audioEvent.volume;
                     snd.audioSrc.minDistance = 5f;
                     snd.audioSrc.maxDistance = 100f;
                     snd.audioSrc.Play();
