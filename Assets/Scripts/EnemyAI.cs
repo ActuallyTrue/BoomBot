@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     NavMeshAgent agent;
+    ShootProjectile shootProjectile;
     private Animator anim;
     public GameObject movingWaypoint;
 
@@ -23,7 +24,27 @@ public class EnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        shootProjectile = GetComponent<ShootProjectile>();
         aiState = AIState.Stationary;
+    }
+
+    public void killEnemy()
+    {
+        agent.enabled = false;
+        shootProjectile.enabled = false;
+        StartCoroutine(Die());
+    }
+
+    IEnumerator Die()
+    {
+        float timer = 3f;
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

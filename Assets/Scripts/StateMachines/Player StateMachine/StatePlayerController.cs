@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using Rewired;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.AI;
 
 public class StatePlayerController : MonoBehaviour
 {
@@ -320,6 +321,14 @@ public class StatePlayerController : MonoBehaviour
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
+            
+            EnemyAI ai = hit.GetComponent<EnemyAI>();
+
+            if (ai != null)
+            {
+                ai.killEnemy();
+            }
+
             if (rb != null && hit.CompareTag("Explodable"))
             {
                 rb.AddExplosionForce(explosionForce * scale, explosionPosition, explosionRadius, explosionUpForce, ForceMode.Impulse);
