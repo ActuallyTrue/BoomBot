@@ -33,7 +33,7 @@ public class MoveProjectile : MonoBehaviour
         if (other.tag == "Player")
         {
             print("HIT");
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }
