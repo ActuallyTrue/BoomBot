@@ -26,3 +26,13 @@ For the audio and events manager, I made everything in the Events folder, and ma
 I was in charge of the AI enemy development and functionality. For the visual design of the enemy, I imported an external asset from the Unity store (https://assetstore.unity.com/packages/3d/characters/robots/scifi-enemies-and-vehicles-15159).
 
 I created the Animator and the control script for the AI enemy (in /scripts/EnemyAI.cs), as well as a projectile that the enemy fires that hurts the player (in /scripts/ShootProjectile.cs & in /scripts/MoveProjectile.cs).
+
+# Sukriti Bhardwaj
+
+I was incharge of the GUI development. I created the Ui and the scripting of the healthbar, the start menu, the pause menu and the checkpoints. 
+
+For the heathbar, I imported the box border asset from https://weeklyhow.com/how-to-make-a-health-bar-in-unity/ and the heart asset from https://opengameart.org/content/heart-2. For health bar, the scripts I created are /scripts/health.cs, /scripts/healthBar.cs.
+
+For the checkpoints, I created /scripts/playerPosition.cs,  /scripts/checkPointDetect,  /scripts/checkPointSave and used the asset from https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780.
+
+For the menu, I created the /scripts/mainMenu.cs and /scripts/pause.cs. 
