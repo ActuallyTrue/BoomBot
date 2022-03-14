@@ -15,14 +15,16 @@ public class pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused)
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 Resume();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
                 pauseGame();
             }
         }
@@ -39,6 +41,7 @@ public class pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         paused = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void quitGame()
     {

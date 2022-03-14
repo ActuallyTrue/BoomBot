@@ -35,7 +35,7 @@ public class health : MonoBehaviour
     public void reduceHealth(int val)
     {
         currHealth -= val;
-        if (currHealth == 0)
+        if (currHealth <= 0)
         {
             EventManager.TriggerEvent<Vector3>("boomBotDeathAudio", this.transform.position);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

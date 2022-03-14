@@ -1,12 +1,21 @@
-i. Start scene file
+Start scene file: startMenu
 
 
 ii. How to play and what parts of the level to observe technology
+WASD/joystick to move around
+Space/bottom face button to jump
+Mouse/right stick to move camera
+Right click/right trigger to blast off (you will fly in the direction of the camera)
+
+You spawn near boxes to test physics, and you want to push them onto the red buttons on the ground to open the doors to the next sections
+of the level.
+The AI start near you on the first level, and they are on the ground on the last section of the level.
+
 
 
 requirements
 iii. Known problem areas
-
+The boxes seems to change size when pushed around
 
 iv. Manifest of which files authored by each teammate:
 1. Detail who on the team did what
@@ -43,3 +52,13 @@ I was in charge of the level design. I worked on building the physical environme
 
 I implemented a lot of prefabs that were included in the asset pack that we used (Snaps Art HD | Buried Memories Volume 2: Serekh: https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780) to build the levels. I also worked on the sliding doors, where if either the player or a box sits on a red button, the door will slide open (in /scripts/OpenDoorButton.cs, /scripts/ActivateButton.cs, /scripts/CanActivateButton.cs), and I made the animator for the door. I also made the death condition when the player falls into the lava in the second (in /scripts/Lava.cs and /scripts/CanDieInLava.cs). 
 
+# Daniel Otaigbe
+
+I was in charge of the player controller and camera.
+
+For the player controller I created: Character.cs (a parent class to base state machines off of), Trigger.cs (to help with state changes), 
+and everything in /scripts/StateMachines. StatePlayerController contains utilities for moving the player while everything in /scripts/StateMachines/PlayerStateMachine/Player States
+contains scripts that has logic for specific character states (like Idle or Jumping). I used the Jammo-Character as well as animations imported
+from mixamo to model and animate the character. I used the unity add-on Cinemachine to setup the camera. I used Rewired to make the game work
+with both controllers and mouse and keyboard. I created GameEnder.cs to end the game and send the player back to the title
+screen at the end of the level. I also made small edits and bug fixes to: ActivateButton.cs, OpenDoorButton.cs, EnemyAI.cs, health.cs, Lava.cs, and pause.cs

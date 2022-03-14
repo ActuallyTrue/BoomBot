@@ -36,25 +36,5 @@ public class OpenDoorButton : MonoBehaviour
             }
             
         }
-        // if (button.getActivatedEnter() && !alreadyEntered) {
-        //     //print(alreadyEntered);
-        //     alreadyEntered = true;
-            
-        //     button.setActivatedEnter();
-            
-        // } else {
-        //     alreadyEntered = false;
-        // }
-        // print(alreadyEntered);
-        // if (button.getActivatedExit() && !alreadyExited) {
-        //     alreadyExited = true;
-        //     anim.SetBool("open", false);
-        //     anim.SetBool("close", true);
-        //     button.setActivatedExit();
-            
-        // }
-        // else {
-        //     alreadyExited = false;
-        // }
     }
 }

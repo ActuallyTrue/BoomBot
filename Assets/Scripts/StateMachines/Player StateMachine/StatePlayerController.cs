@@ -63,6 +63,7 @@ public class StatePlayerController : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerId = 0;
         player = ReInput.players.GetPlayer(playerId);
         player.controllers.hasKeyboard = true;
@@ -138,16 +139,28 @@ public class StatePlayerController : MonoBehaviour
     }
 
     public bool checkIfGrounded() {
-        RaycastHit hit;
         int layerMask = 1 << 6;
         //for later
         //Physics.Raycast(groundChecker.transform.position, Vector3.down, out hit, 1f, layerMask)
-        Collider[] colliderArray = Physics.OverlapSphere(groundChecker.transform.position, 0.7f, layerMask);
-        foreach (Collider col in colliderArray)
+        Vector3 size = boxCollider.size;
+        Vector3 center = new Vector3 (boxCollider.center.x, boxCollider.center.y, boxCollider.center.z);
+
+        Vector3 vertex1 = new Vector3 (center.x + size.x / 2, center.y - size.y/3, center.z + size.z / 2);
+        Vector3 vertex2 = new Vector3 (center.x - size.x / 2, center.y - size.y/3, center.z - size.z / 2);
+        Vector3 vertex3 = new Vector3 (center.x + size.x / 2, center.y - size.y/3, center.z - size.z / 2);
+        Vector3 vertex4 = new Vector3 (center.x - size.x / 2, center.y - size.y/3, center.z + size.z / 2);
+
+        Vector3[] vertices = {vertex1, vertex2, vertex3, vertex4};
+
+        foreach (Vector3 vertex in vertices)
         {
-            if (col.gameObject.layer == 6) { //the ground layer
-                return true;
-            }
+            RaycastHit hit;
+            if (Physics.Raycast(transform.TransformPoint(vertex), Vector3.down, out hit, 0.7f, layerMask))
+            {
+                if (hit.collider.gameObject.layer == 6) { //the ground layer
+                    return true;
+                }
+            }    
         }
         return false;
     }

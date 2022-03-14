@@ -7,15 +7,13 @@ public class Lava : MonoBehaviour
     private health player;
 
     void Start() {
-        player = GetComponent<health>();
+        player = FindObjectOfType<health>();
     }
 
     void OnTriggerEnter(Collider c) {
-        if (c.attachedRigidbody != null) {
-            CanDieInLava collidingObject = c.attachedRigidbody.gameObject.GetComponent<CanDieInLava>();
-            if (collidingObject != null) {
-                player.currHealth = 0;
-            }
+        if (c.gameObject.CompareTag("Player"))
+        {
+            player.reduceHealth(100);
         }
     }
 }
