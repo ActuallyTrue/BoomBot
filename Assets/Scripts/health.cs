@@ -40,6 +40,7 @@ public class health : MonoBehaviour
             EventManager.TriggerEvent<Vector3>("boomBotDeathAudio", this.transform.position);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        EventManager.TriggerEvent<Vector3>("boomBotHurtAudio", this.transform.position);
         healthBar.updateHealth(currHealth);
     }
 }
