@@ -36,3 +36,10 @@ For the heathbar, I imported the box border asset from https://weeklyhow.com/how
 For the checkpoints, I created /scripts/playerPosition.cs,  /scripts/checkPointDetect,  /scripts/checkPointSave and used the asset from https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780.
 
 For the menu, I created /scripts/mainMenu.cs and /scripts/pause.cs. 
+
+# Heather Zhu
+
+I was in charge of the level design. I worked on building the physical environment that the player interacts with. I created 3 separate "levels" so far that the player must traverse through in order to win the game.
+
+I implemented a lot of prefabs that were included in the asset pack that we used (Snaps Art HD | Buried Memories Volume 2: Serekh: https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780) to build the levels. I also worked on the sliding doors, where if either the player or a box sits on a red button, the door will slide open (in /scripts/OpenDoorButton.cs, /scripts/ActivateButton.cs, /scripts/CanActivateButton.cs), and I made the animator for the door. I also made the death condition when the player falls into the lava in the second (in /scripts/Lava.cs and /scripts/CanDieInLava.cs). 
+
