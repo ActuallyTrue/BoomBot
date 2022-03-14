@@ -37,6 +37,7 @@ public class health : MonoBehaviour
         currHealth -= val;
         if (currHealth == 0)
         {
+            EventManager.TriggerEvent<Vector3>("boomBotDeathAudio", this.transform.position);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         healthBar.updateHealth(currHealth);

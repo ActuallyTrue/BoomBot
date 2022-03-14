@@ -217,6 +217,11 @@ public class StatePlayerController : MonoBehaviour
         rb.velocity = Vector3.Lerp(rb.velocity, velocity, 10f * Time.deltaTime);
     }
 
+    public void EmitFootstep()
+    {
+        EventManager.TriggerEvent<Vector3>("footstepAudio", this.transform.position);
+    }
+
     public Vector2 clampTo8Directions(Vector2 vectorToClamp) {
         if (vectorToClamp.x > 0.1f && (vectorToClamp.y < 0.1f && vectorToClamp.y > -0.1f))
         {

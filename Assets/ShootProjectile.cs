@@ -30,7 +30,6 @@ public class ShootProjectile : MonoBehaviour
     {
         GameObject clone = Instantiate(projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
         clone.SetActive(true);
-        // enemies too far away shoot
-        //EventManager.TriggerEvent<Vector3>("enemyPewAudio", this.transform.position);
+        EventManager.TriggerEvent<Vector3>("enemyPewAudio", this.transform.position);
     }
 }

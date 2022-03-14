@@ -43,7 +43,7 @@ public class EnemyAI : MonoBehaviour
             timer -= Time.deltaTime;
             yield return null;
         }
-
+        EventManager.TriggerEvent<Vector3>("deathAudio", this.transform.position);
         Destroy(gameObject);
     }
 
