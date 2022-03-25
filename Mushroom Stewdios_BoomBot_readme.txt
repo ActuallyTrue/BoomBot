@@ -1,12 +1,21 @@
-i. Start scene file
+Start scene file: startMenu
 
 
 ii. How to play and what parts of the level to observe technology
+WASD/joystick to move around
+Space/bottom face button to jump
+Mouse/right stick to move camera
+Right click/right trigger to blast off (you will fly in the direction of the camera)
+
+You spawn near boxes to test physics, and you want to push them onto the red buttons on the ground to open the doors to the next sections
+of the level.
+The AI start near you on the first level, and they are on the ground on the last section of the level.
+
 
 
 requirements
 iii. Known problem areas
-
+The boxes seems to change size when pushed around
 
 iv. Manifest of which files authored by each teammate:
 1. Detail who on the team did what
@@ -20,3 +29,36 @@ I was in charge of the explosion physics system (i.e. managing how explosions fr
 For the explosions physics system, I created one function on the `/scripts/StateMachines/Player StateMachine/StateMachineController.cs` file and modified another to use this function.
 
 For the audio and events manager, I made everything in the Events folder, and made two Prefabs, the EventManager as well as the 3DEventSound.
+
+# Zehao Tan
+
+I was in charge of the AI enemy development and functionality. For the visual design of the enemy, I imported an external asset from the Unity store (https://assetstore.unity.com/packages/3d/characters/robots/scifi-enemies-and-vehicles-15159).
+
+I created the Animator and the control script for the AI enemy (in /scripts/EnemyAI.cs), as well as a projectile that the enemy fires that hurts the player (in /scripts/ShootProjectile.cs & in /scripts/MoveProjectile.cs).
+
+# Sukriti Bhardwaj
+
+I was incharge of the GUI development. I created the UI and the scripting of the healthbar, the start menu, the pause menu and the checkpoints. 
+
+For the heathbar, I imported the box border asset from https://weeklyhow.com/how-to-make-a-health-bar-in-unity/ and the heart asset from https://opengameart.org/content/heart-2. The scripts I created are /scripts/health.cs, /scripts/healthBar.cs.
+
+For the checkpoints, I created /scripts/playerPosition.cs,  /scripts/checkPointDetect,  /scripts/checkPointSave and used the asset from https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780.
+
+For the menu, I created /scripts/mainMenu.cs and /scripts/pause.cs. 
+
+# Heather Zhu
+
+I was in charge of the level design. I worked on building the physical environment that the player interacts with. I created 3 separate "levels" so far that the player must traverse through in order to win the game.
+
+I implemented a lot of prefabs that were included in the asset pack that we used (Snaps Art HD | Buried Memories Volume 2: Serekh: https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780) to build the levels. I also worked on the sliding doors, where if either the player or a box sits on a red button, the door will slide open (in /scripts/OpenDoorButton.cs, /scripts/ActivateButton.cs, /scripts/CanActivateButton.cs), and I made the animator for the door. I also made the death condition when the player falls into the lava in the second (in /scripts/Lava.cs and /scripts/CanDieInLava.cs). 
+
+# Daniel Otaigbe
+
+I was in charge of the player controller and camera.
+
+For the player controller I created: Character.cs (a parent class to base state machines off of), Trigger.cs (to help with state changes), 
+and everything in /scripts/StateMachines. StatePlayerController contains utilities for moving the player while everything in /scripts/StateMachines/PlayerStateMachine/Player States
+contains scripts that has logic for specific character states (like Idle or Jumping). I used the Jammo-Character as well as animations imported
+from mixamo to model and animate the character. I used the unity add-on Cinemachine to setup the camera. I used Rewired to make the game work
+with both controllers and mouse and keyboard. I created GameEnder.cs to end the game and send the player back to the title
+screen at the end of the level. I also made small edits and bug fixes to: ActivateButton.cs, OpenDoorButton.cs, EnemyAI.cs, health.cs, Lava.cs, and pause.cs

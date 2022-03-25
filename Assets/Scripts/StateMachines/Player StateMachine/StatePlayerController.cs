@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using Rewired;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.AI;
 
 public class StatePlayerController : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class StatePlayerController : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerId = 0;
         player = ReInput.players.GetPlayer(playerId);
         player.controllers.hasKeyboard = true;
@@ -137,13 +139,28 @@ public class StatePlayerController : MonoBehaviour
     }
 
     public bool checkIfGrounded() {
-        RaycastHit hit;
         int layerMask = 1 << 6;
-        if (Physics.Raycast(groundChecker.transform.position, Vector3.down, out hit, 1f, layerMask))
+        //for later
+        //Physics.Raycast(groundChecker.transform.position, Vector3.down, out hit, 1f, layerMask)
+        Vector3 size = boxCollider.size;
+        Vector3 center = new Vector3 (boxCollider.center.x, boxCollider.center.y, boxCollider.center.z);
+
+        Vector3 vertex1 = new Vector3 (center.x + size.x / 2, center.y - size.y/3, center.z + size.z / 2);
+        Vector3 vertex2 = new Vector3 (center.x - size.x / 2, center.y - size.y/3, center.z - size.z / 2);
+        Vector3 vertex3 = new Vector3 (center.x + size.x / 2, center.y - size.y/3, center.z - size.z / 2);
+        Vector3 vertex4 = new Vector3 (center.x - size.x / 2, center.y - size.y/3, center.z + size.z / 2);
+
+        Vector3[] vertices = {vertex1, vertex2, vertex3, vertex4};
+
+        foreach (Vector3 vertex in vertices)
         {
-            if (hit.collider.gameObject.layer == 6) { //the ground layer
-                return true;
-            }
+            RaycastHit hit;
+            if (Physics.Raycast(transform.TransformPoint(vertex), Vector3.down, out hit, 0.7f, layerMask))
+            {
+                if (hit.collider.gameObject.layer == 6) { //the ground layer
+                    return true;
+                }
+            }    
         }
         return false;
     }
@@ -211,6 +228,11 @@ public class StatePlayerController : MonoBehaviour
         moveInput = player.GetAxis2D("MoveHorizontal", "MoveVertical");
         Vector3 velocity = CalculatePlayerVelocity(rb.velocity, moveInput, moveSpeed, velocityXSmoothing, velocityZSmoothing, accelerationTime);
         rb.velocity = Vector3.Lerp(rb.velocity, velocity, 10f * Time.deltaTime);
+    }
+
+    public void EmitFootstep()
+    {
+        EventManager.TriggerEvent<Vector3>("footstepAudio", this.transform.position);
     }
 
     public Vector2 clampTo8Directions(Vector2 vectorToClamp) {
@@ -320,6 +342,14 @@ public class StatePlayerController : MonoBehaviour
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
+            
+            EnemyAI ai = hit.GetComponent<EnemyAI>();
+
+            if (ai != null)
+            {
+                ai.killEnemy();
+            }
+
             if (rb != null && hit.CompareTag("Explodable"))
             {
                 rb.AddExplosionForce(explosionForce * scale, explosionPosition, explosionRadius, explosionUpForce, ForceMode.Impulse);
