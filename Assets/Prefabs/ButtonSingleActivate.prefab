@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6520108114211963232}
   - component: {fileID: 6520108114211963233}
   - component: {fileID: 6520108114211963246}
-  - component: {fileID: 6520108114211963234}
+  - component: {fileID: -5185863338252219005}
   m_Layer: 0
   m_Name: ButtonSingleActivate
   m_TagString: Untagged
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6520108114211963234
+--- !u!114 &-5185863338252219005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5971067181081342874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b0d7a284a684e46aa5910a77eb1ab0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bf23b8207b329b4aaf8932a97100179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressed: 0
