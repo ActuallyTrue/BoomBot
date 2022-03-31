@@ -18,7 +18,7 @@ public class SpawnDebris : MonoBehaviour
         time = rateOfSpawn;
 
         debris.transform.localScale = new Vector3(5, 5, 5);
-        debrisList = new ArrayList();
+        //debrisList = new ArrayList();
     }
 
     // Update is called once per frame
@@ -27,8 +27,13 @@ public class SpawnDebris : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0f) {
             spawnedObject = (GameObject) Instantiate(debris, this.transform.position, Quaternion.identity);
-            debrisList.Add(spawnedObject);
+            //debrisList.Add(spawnedObject);
             time = rateOfSpawn;
+
+            // if (spawnedObject != null && spawnedObject.transform.position.y <= -20) {
+            //     Destroy(spawnedObject, 1.0f);
+            //     debrisList.Remove(spawnedObject);
+            // }
         }
 
         // foreach (GameObject obj in debrisList) {
@@ -39,10 +44,10 @@ public class SpawnDebris : MonoBehaviour
         //     }
         // }
 
-        if (Input.GetKey("g") && debrisList.Count > 0) {
-            Destroy((GameObject) debrisList[0]);
-            debrisList.Remove((GameObject) debrisList[0]);
-        }
+        // if (Input.GetKey("g") && debrisList.Count > 0) {
+        //     Destroy((GameObject) debrisList[0]);
+        //     debrisList.Remove((GameObject) debrisList[0]);
+        // }
         
     }
 }
