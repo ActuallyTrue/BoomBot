@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class SpawnDebris : MonoBehaviour
 {
-    public GameObject debris;
+    public GameObject[] debrisList;
+    private int debrisListCount;
 
     private float rateOfSpawn;
     private float time;
     private GameObject spawnedObject;
-    private ArrayList debrisList;
+    private GameObject debris;
 
     // Start is called before the first frame update
     void Start()
     {
-        rateOfSpawn = Random.Range(0.5f, 5f);
+        rateOfSpawn = Random.Range(1f, 5f);
         time = rateOfSpawn;
 
+        debrisListCount = debrisList.Length;
+
+        int rand = Random.Range(0, debrisListCount);
+        debris = debrisList[rand];
+        print(debrisListCount);
+        print(rand);
+
         debris.transform.localScale = new Vector3(5, 5, 5);
-        //debrisList = new ArrayList();
     }
 
     // Update is called once per frame
@@ -27,27 +34,8 @@ public class SpawnDebris : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0f) {
             spawnedObject = (GameObject) Instantiate(debris, this.transform.position, Quaternion.identity);
-            //debrisList.Add(spawnedObject);
             time = rateOfSpawn;
-
-            // if (spawnedObject != null && spawnedObject.transform.position.y <= -20) {
-            //     Destroy(spawnedObject, 1.0f);
-            //     debrisList.Remove(spawnedObject);
-            // }
         }
-
-        // foreach (GameObject obj in debrisList) {
-        //     print(obj);
-        //     if (obj != null && obj.transform.position.y <= -20) {
-        //         Destroy(obj, 1.0f);
-        //         debrisList.Remove(obj);
-        //     }
-        // }
-
-        // if (Input.GetKey("g") && debrisList.Count > 0) {
-        //     Destroy((GameObject) debrisList[0]);
-        //     debrisList.Remove((GameObject) debrisList[0]);
-        // }
         
     }
 }

@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8660109732997470725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -108,4 +108,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9ce81370f0a8f44a6d3f7069f9da5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debris: {fileID: 84683860872028183, guid: df2bff71d1a4ae447870fcb350a94dc5, type: 3}
+  debrisList:
+  - {fileID: 5968929790046280171, guid: 1eab0e171c096284da54217615c176b5, type: 3}
+  - {fileID: 7140400537461383534, guid: 7a48307c7d6e96d4f80e2d6cf7365cef, type: 3}
+  - {fileID: 2253414379159282389, guid: c0e37e8cf9025ee4c9bc684285a04acb, type: 3}
+  - {fileID: 6712062087359939227, guid: 7238a6f5eda726343a2277d67ddb215f, type: 3}
+  - {fileID: 904306602609564080, guid: a56e6e5581aa2014e805cedeaae1aab4, type: 3}
+  - {fileID: 3184665369706742069, guid: b66e3eea60c30ec458e5ed0d13de1061, type: 3}
+  - {fileID: 1590884345743861099, guid: 23e9bae9852d8de42a1acc4340234e38, type: 3}
+  - {fileID: 8558159539561781033, guid: 4be1ddf219d831a48844be1dbe6534cd, type: 3}
+  - {fileID: 2785310022233430718, guid: 1b389d4b089d4e948b96fa549a41d79f, type: 3}
+  - {fileID: 7647848632382893977, guid: a3ca7125d338c684baa5ded48cec9406, type: 3}
