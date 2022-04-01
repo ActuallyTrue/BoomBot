@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - C
   - Floor
+  - Lava
   layers:
   - Default
   - TransparentFX

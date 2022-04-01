@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4905942968757925343}
   m_Layer: 0
   m_Name: MetalBox_02_snaps012
-  m_TagString: Untagged
+  m_TagString: Explodable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078dd83678ef24cc0b5ea5f854a87d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDestroyed: 0
 --- !u!54 &4905942968757925343
 Rigidbody:
   m_ObjectHideFlags: 0

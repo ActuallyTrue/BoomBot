@@ -22,8 +22,6 @@ public class SpawnDebris : MonoBehaviour
 
         int rand = Random.Range(0, debrisListCount);
         debris = debrisList[rand];
-        print(debrisListCount);
-        print(rand);
 
         debris.transform.localScale = new Vector3(5, 5, 5);
     }
