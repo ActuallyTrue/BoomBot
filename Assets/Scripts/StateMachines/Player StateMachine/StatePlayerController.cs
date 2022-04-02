@@ -27,6 +27,8 @@ public class StatePlayerController : MonoBehaviour
     public float explosionRadius = 5f;
     public float explosionUpForce = 1f;
 
+    public GameObject explosionEffect;
+
     [HideInInspector]
     public Vector2 moveInput;
     public Player player;
@@ -101,6 +103,7 @@ public class StatePlayerController : MonoBehaviour
             scale = 1.5f;
         }
         Detonate(scale);
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
         EventManager.TriggerEvent<Vector3>("explosionEvent", this.transform.position);
     }
 
