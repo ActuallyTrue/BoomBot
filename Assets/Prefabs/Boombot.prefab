@@ -3703,6 +3703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078dd83678ef24cc0b5ea5f854a87d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDestroyed: 0
 --- !u!1 &6030665523985915285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5859,8 +5860,8 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_MaxSpeed: 2
-    m_AccelTime: 0.2
-    m_DecelTime: 0.1
+    m_AccelTime: 0
+    m_DecelTime: 0
     m_InputAxisName: LookVertical
     m_InputAxisValue: 0
     m_InvertInput: 1
@@ -5882,8 +5883,8 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_MaxSpeed: 300
-    m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_AccelTime: 0
+    m_DecelTime: 0
     m_InputAxisName: LookHorizontal
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -5917,9 +5918,9 @@ MonoBehaviour:
     m_Radius: 0.62
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
-  - {fileID: 98282855163411755}
-  - {fileID: 3379456686694391006}
-  - {fileID: 4841720456031502332}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1933969433083005951
 MonoBehaviour:
   m_ObjectHideFlags: 0
