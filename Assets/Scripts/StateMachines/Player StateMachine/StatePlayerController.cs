@@ -55,13 +55,13 @@ public class StatePlayerController : MonoBehaviour
     public bool invincible = false;
     [HideInInspector]
     private bool damaged = false;
-
-    public float health = 100f;
     public float invincibilityTime;
 
     public bool canAct = true;
 
     public Camera camera;
+
+    public health health;
 
     void Start()
     {
@@ -75,6 +75,7 @@ public class StatePlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         camera = Camera.main;
         gravity = Physics.gravity * gravityScale;
+        health = GetComponent<health>();
     }
 
     public void FixedUpdate() {
@@ -174,6 +175,11 @@ public class StatePlayerController : MonoBehaviour
 
     public void setDamaged(bool enable) {
         damaged = enable;
+    }
+
+    public void takeDamage()
+    {
+        health.reduceHealth(10);
     }
 
 
@@ -305,17 +311,6 @@ public class StatePlayerController : MonoBehaviour
             
     //     }
     // }
-
-    public void takeDamage(bool damaged) {
-        if (invincible == false) {
-            setDamaged(damaged);
-            health -= 5f;
-            SetPlayerInvincibility(true);
-            if (health <= 0) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }  
-    }
 
     public void SetPlayerInvincibility(bool enable) {
         invincible = enable;
