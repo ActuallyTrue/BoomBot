@@ -6,13 +6,12 @@ public class ShootProjectile : MonoBehaviour
 {
 
     [SerializeField] private GameObject projectile;
-    [SerializeField] private float secondsBeforeShooting = 1;
     private float currSecondsLeft;
 
     // Start is called before the first frame update
     void Start()
     {
-        currSecondsLeft = secondsBeforeShooting;
+        currSecondsLeft = Random.Range(0.3f, 2f);
     }
 
     // Update is called once per frame
@@ -21,7 +20,7 @@ public class ShootProjectile : MonoBehaviour
         if (currSecondsLeft <= 0)
         {
             Shoot();
-            currSecondsLeft = secondsBeforeShooting;
+            currSecondsLeft = Random.Range(0.3f, 2f);
         }
         currSecondsLeft -= Time.deltaTime;
     }

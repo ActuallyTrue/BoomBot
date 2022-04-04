@@ -53,40 +53,25 @@ public class EnemyAI : MonoBehaviour
         if (agent.enabled)
         {
             anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-            // switch (aiState) {
-            //     case AIState.Stationary:
-            //     if (currWayPoint != -1)
-            //     {
-            //         if (Vector3.Distance(transform.position, waypoints[currWayPoint].transform.position) < 1.0f && !agent.pathPending)
-            //         {
-            //             setNextWayPoint();
-            //         }
-            //     }
-            //     break;
-            //     case AIState.Moving:
             if (Vector3.Distance(transform.position, movingWaypoint.transform.position) < 1.0f && !agent.pathPending)
             {
                 anim.SetBool("forward", false);
                 anim.SetTrigger("attack");
             }
-            float lookaheadTime = (movingWaypoint.transform.position - agent.transform.position).magnitude / agent.speed;
+            float distanceToPlayer = (movingWaypoint.transform.position - transform.position).magnitude;
+            shootProjectile.enabled = distanceToPlayer < 20;
+            float lookaheadTime = distanceToPlayer / agent.speed;
             Vector3 targetPos = movingWaypoint.transform.position + movingWaypoint.GetComponent<VelocityReporter>().velocity * lookaheadTime;
             agent.SetDestination(targetPos);
             bool cantGetThereFromHere = NavMesh.Raycast(movingWaypoint.transform.position, targetPos, out var hit, NavMesh.AllAreas);
             if (!cantGetThereFromHere)
             {
-                // destinationTracker.transform.position = targetPos;
                 agent.SetDestination(targetPos);
             }
             else
             {
-                // destinationTracker.transform.position = hit.position;
                 agent.SetDestination(hit.position);
             }
-            //     break;
-            //     default:
-            //     break;
-            // }
         }
     }
 }
