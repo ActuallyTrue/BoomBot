@@ -8,15 +8,31 @@ public class pause : MonoBehaviour
     public bool paused;
     public GameObject pauseMenu;
     public GameObject instructions;
+    private float instructionTime = 3f;
+    private float timer;
+
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0f;
         pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (timer > 0f)
+        {
+            timer -= Time.unscaledDeltaTime;
+        }
+        else
+        {
+            if (instructions.activeInHierarchy)
+            {
+                Debug.Log("THIS SUCKS");
+                instructions.SetActive(false);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused)
@@ -57,19 +73,13 @@ public class pause : MonoBehaviour
     public void ins()
     {
         instructions.SetActive(true);
-        StartCoroutine(timeC());
+        timer = instructionTime;
 
     }
 
     public void quitGame()
     {
         SceneManager.LoadScene("startMenu");
-    }
-
-    private IEnumerator timeC()
-    {
-        yield return new WaitForSeconds(3);
-        instructions.SetActive(false);
     }
 
 }

@@ -25,11 +25,11 @@ public class checkPointDetect : MonoBehaviour
         {
             chkPt.lastCheckpoint = transform.position;
             chktext.SetActive(true);
-            StartCoroutine(timeC());
+            StartCoroutine(timeA());
         }
     }
 
-    private IEnumerator timeC()
+    private IEnumerator timeA()
     {
         yield return new WaitForSeconds(1);
         chktext.SetActive(false);
