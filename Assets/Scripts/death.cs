@@ -31,8 +31,9 @@ public class death : MonoBehaviour
     public void checkPointGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         deathMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void quitGame()

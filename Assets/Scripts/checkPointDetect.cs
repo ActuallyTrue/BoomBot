@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class checkPointDetect : MonoBehaviour
 {
     // Start is called before the first frame update
     private checkPointSave chkPt;
+    public GameObject chktext;
     void Start()
     {
         chkPt = GameObject.FindGameObjectWithTag("CP").GetComponent<checkPointSave>();
@@ -20,9 +23,15 @@ public class checkPointDetect : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("CHECKPOINT");
-            Debug.Log(transform.position);
             chkPt.lastCheckpoint = transform.position;
+            chktext.SetActive(true);
+            StartCoroutine(timeC());
         }
+    }
+
+    private IEnumerator timeC()
+    {
+        yield return new WaitForSeconds(1);
+        chktext.SetActive(false);
     }
 }

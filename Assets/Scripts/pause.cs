@@ -7,6 +7,7 @@ public class pause : MonoBehaviour
 {
     public bool paused;
     public GameObject pauseMenu;
+    public GameObject instructions;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,8 +54,22 @@ public class pause : MonoBehaviour
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+    public void ins()
+    {
+        instructions.SetActive(true);
+        StartCoroutine(timeC());
+
+    }
+
     public void quitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("startMenu");
     }
+
+    private IEnumerator timeC()
+    {
+        yield return new WaitForSeconds(3);
+        instructions.SetActive(false);
+    }
+
 }
