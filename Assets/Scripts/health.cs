@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class health : MonoBehaviour
 {
     public int maximHealth = 100;
     public int currHealth = 0;
     public healthBar healthBar;
+    public GameObject deathMenu;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +41,9 @@ public class health : MonoBehaviour
         if (currHealth <= 0)
         {
             EventManager.TriggerEvent<Vector3>("boomBotDeathAudio", this.transform.position);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            deathMenu.SetActive(true);
+            
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         EventManager.TriggerEvent<Vector3>("boomBotHurtAudio", this.transform.position);
         healthBar.updateHealth(currHealth);
