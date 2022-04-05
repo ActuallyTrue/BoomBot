@@ -15,7 +15,7 @@ public class SpawnDebris : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rateOfSpawn = Random.Range(1f, 5f);
+        rateOfSpawn = Random.Range(5f, 8f);
         time = rateOfSpawn;
 
         debrisListCount = debrisList.Length;
