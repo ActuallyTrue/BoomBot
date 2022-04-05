@@ -8,7 +8,7 @@ public class checkPointDetect : MonoBehaviour
     private checkPointSave chkPt;
     void Start()
     {
-        chkPt = GameObject.FindGameObjectWithTag("C").GetComponent<checkPointSave>();
+        chkPt = GameObject.FindGameObjectWithTag("CP").GetComponent<checkPointSave>();
     }
 
     // Update is called once per frame

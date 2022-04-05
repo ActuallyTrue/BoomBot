@@ -21,7 +21,7 @@ public class checkPointSave : MonoBehaviour
     }
     void Start()
     {
-        lastCheckpoint = new Vector3(187.18f, -0.12f, 100.5f);
+        lastCheckpoint = new Vector3(430.0484f, 0f, 415.8f);
     }
 
     // Update is called once per frame

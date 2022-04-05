@@ -10,6 +10,7 @@ TagManager:
   - C
   - Floor
   - Lava
+  - CP
   layers:
   - Default
   - TransparentFX

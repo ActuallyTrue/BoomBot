@@ -9,7 +9,7 @@ public class playerPosition : MonoBehaviour
     private checkPointSave chkPt;
     void Start()
     {
-        chkPt = GameObject.FindGameObjectWithTag("C").GetComponent<checkPointSave>();
+        chkPt = GameObject.FindGameObjectWithTag("CP").GetComponent<checkPointSave>();
         transform.position = chkPt.lastCheckpoint;
     }
 
