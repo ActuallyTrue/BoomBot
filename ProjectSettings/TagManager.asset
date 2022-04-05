@@ -10,7 +10,7 @@ TagManager:
   - C
   - Floor
   - Lava
-  - CP
+  - Debris
   layers:
   - Default
   - TransparentFX

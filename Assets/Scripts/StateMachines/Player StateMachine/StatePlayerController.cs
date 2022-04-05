@@ -177,9 +177,9 @@ public class StatePlayerController : MonoBehaviour
         damaged = enable;
     }
 
-    public void takeDamage()
+    public void takeDamage(int damage = 10)
     {
-        health.reduceHealth(10);
+        health.reduceHealth(damage);
     }
 
 
@@ -293,13 +293,14 @@ public class StatePlayerController : MonoBehaviour
         canAct = enable;
     }
 
-     //void OnCollisionEnter(Collision collision)
-     //{
-     //    if (collision.gameObject.CompareTag("Platform"))
-     //    {
-     //        transform.parent = collision.transform;
-     //    }
-     //}
+     void OnCollisionEnter(Collision collision)
+     {
+        if (collision.gameObject.CompareTag("Debris") && collision.impulse.magnitude > 10)
+         {
+            Debug.Log(collision.impulse.magnitude);
+            takeDamage(5);
+         }
+     }
 
     //private void OnCollisionExit(Collision collision)
     //{

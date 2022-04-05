@@ -32,6 +32,7 @@ public class SpawnDebris : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0f) {
             spawnedObject = (GameObject) Instantiate(debris, this.transform.position, Quaternion.identity);
+            spawnedObject.tag = "Debris";
             time = rateOfSpawn;
         }
         
