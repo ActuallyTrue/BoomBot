@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pause : MonoBehaviour
 {
@@ -36,6 +37,15 @@ public class pause : MonoBehaviour
         Time.timeScale = 0f;
         paused = true;
     }
+
+    public void checkPointGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        paused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void Resume()
     {
         pauseMenu.SetActive(false);
