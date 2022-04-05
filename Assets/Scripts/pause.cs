@@ -58,7 +58,7 @@ public class pause : MonoBehaviour
     public void checkPointGame()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         paused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
