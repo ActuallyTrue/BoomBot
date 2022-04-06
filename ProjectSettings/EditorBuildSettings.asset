@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/storyScene.unity
+    guid: 13807a7fb196a4d998433d69ba23a145
+  - enabled: 1
     path: Assets/Scenes/startMenu.unity
     guid: 249c4f7e60f7f49b48a28cfbaec3cd8b
-  - enabled: 0
-    path: Assets/Scenes/checkPoint.unity
-    guid: 95e76c4e91c004f0d972d4f09835bf71
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 0e37e6faa066a4744bf91cf807aeb43b
+  - enabled: 0
+    path: Assets/Scenes/checkPoint.unity
+    guid: 95e76c4e91c004f0d972d4f09835bf71
   m_configObjects: {}
