@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class OptionsMenu : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject instructions;
     public Slider xSensitivitySlider;
     public Slider ySensitivitySlider;
 
@@ -27,6 +28,16 @@ public class OptionsMenu : MonoBehaviour
     public void turnOffOptionsMenu()
     {
         menu.SetActive(false);
+    }
+
+    public void turnOnInstructionsMenu()
+    {
+        instructions.SetActive(true);
+    }
+
+    public void turnOffInstructionsMenu()
+    {
+        instructions.SetActive(false);
     }
 
     public void setXSensitivity(float value)
