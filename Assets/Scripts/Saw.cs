@@ -16,7 +16,7 @@ public class Saw : MonoBehaviour
 
     void OnTriggerEnter(Collider c) {
         if (c.gameObject.CompareTag("Player")) {
-             player.GetComponent<Rigidbody>().AddForce((player.transform.forward + new Vector3(3, 3, 3)) * -15f,ForceMode.Impulse);
+            playerHealth.reduceHealth(20);
         } 
     }
 }

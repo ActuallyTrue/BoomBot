@@ -11,6 +11,9 @@ public class health : MonoBehaviour
     public healthBar healthBar;
     public GameObject deathMenu;
 
+    private bool invulnerable = false; 
+    private float timer = 1f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,15 @@ public class health : MonoBehaviour
         //{
         //    reduceHealth(10);
         //}
+
+        if (invulnerable) {
+            timer -= Time.deltaTime;
+            if (timer <= 0f) {
+                invulnerable = false;
+                timer = 1f;
+            }
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,15 +49,18 @@ public class health : MonoBehaviour
 
     public void reduceHealth(int val)
     {
-        currHealth -= val;
-        if (currHealth <= 0)
-        {
-            EventManager.TriggerEvent<Vector3>("boomBotDeathAudio", this.transform.position);
-            deathMenu.SetActive(true);
-            
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (!invulnerable) {
+            currHealth -= val;
+            if (currHealth <= 0)
+            {
+                EventManager.TriggerEvent<Vector3>("boomBotDeathAudio", this.transform.position);
+                deathMenu.SetActive(true);
+                
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            EventManager.TriggerEvent<Vector3>("boomBotHurtAudio", this.transform.position);
+            healthBar.updateHealth(currHealth);
+            invulnerable = true;
         }
-        EventManager.TriggerEvent<Vector3>("boomBotHurtAudio", this.transform.position);
-        healthBar.updateHealth(currHealth);
     }
 }

@@ -6,6 +6,8 @@ public class SingleActivateButton : MonoBehaviour
 {
 
     public bool isActivated;
+    public Material material;
+    public Light light;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,9 @@ public class SingleActivateButton : MonoBehaviour
             if (!isActivated) {
                 EventManager.TriggerEvent<Vector3>("buttonClickAudio", this.transform.position);
                 isActivated = true;
+                this.GetComponent<MeshRenderer>().material = material;
+                light.enabled = false;
             }
-           
         }
     }
 }
