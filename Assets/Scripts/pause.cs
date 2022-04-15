@@ -21,18 +21,6 @@ public class pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0f)
-        {
-            timer -= Time.unscaledDeltaTime;
-        }
-        else
-        {
-            if (instructions.activeInHierarchy)
-            {
-                Debug.Log("THIS SUCKS");
-                instructions.SetActive(false);
-            }
-        }
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused)
@@ -69,12 +57,6 @@ public class pause : MonoBehaviour
         Time.timeScale = 1f;
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
-    }
-    public void ins()
-    {
-        instructions.SetActive(true);
-        timer = instructionTime;
-
     }
 
     public void quitGame()
