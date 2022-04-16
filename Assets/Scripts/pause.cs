@@ -7,7 +7,7 @@ public class pause : MonoBehaviour
 {
     public bool paused;
     public GameObject pauseMenu;
-    public GameObject instructions;
+    public OptionsMenu optionsMenu;
     private float instructionTime = 3f;
     private float timer;
 
@@ -16,6 +16,7 @@ public class pause : MonoBehaviour
     {
         timer = 0f;
         pauseMenu.SetActive(false);
+        optionsMenu = FindObjectOfType<OptionsMenu>();
     }
 
     // Update is called once per frame
@@ -54,6 +55,8 @@ public class pause : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        optionsMenu.turnOffInstructionsMenu();
+        optionsMenu.turnOffOptionsMenu();
         Time.timeScale = 1f;
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
