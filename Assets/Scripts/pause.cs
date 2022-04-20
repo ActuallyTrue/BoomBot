@@ -9,12 +9,10 @@ public class pause : MonoBehaviour
     public GameObject pauseMenu;
     public OptionsMenu optionsMenu;
     private float instructionTime = 3f;
-    private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = 0f;
         pauseMenu.SetActive(false);
         optionsMenu = FindObjectOfType<OptionsMenu>();
     }
@@ -64,6 +62,9 @@ public class pause : MonoBehaviour
 
     public void quitGame()
     {
+        Time.timeScale = 1f;
+        paused = false;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("startMenu");
     }
 
