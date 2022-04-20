@@ -76,6 +76,8 @@ public class StatePlayerController : MonoBehaviour
         camera = Camera.main;
         gravity = Physics.gravity * gravityScale;
         health = GetComponent<health>();
+        SensitivitySaver sensSaver = FindObjectOfType<SensitivitySaver>();
+        sensSaver.setSens();
     }
 
     public void FixedUpdate() {

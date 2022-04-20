@@ -27,6 +27,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void turnOffOptionsMenu()
     {
+        SensitivitySaver sensSaver = FindObjectOfType<SensitivitySaver>();
+        sensSaver.saveSens(xSensitivitySlider.value, ySensitivitySlider.value);
         menu.SetActive(false);
     }
 
