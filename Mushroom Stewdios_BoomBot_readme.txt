@@ -40,7 +40,7 @@ I created the Animator and the control script for the AI enemy (in /scripts/Enem
 
 I was incharge of the GUI development. I created the UI and the scripting of the healthbar, the start menu, the pause menu and the checkpoints. 
 
-For the heathbar, I imported the box border asset from https://weeklyhow.com/how-to-make-a-health-bar-in-unity/ and the heart asset from https://opengameart.org/content/heart-2. The scripts I created are /scripts/health.cs, /scripts/healthBar.cs.
+For the healthbar, I imported the box border asset from https://weeklyhow.com/how-to-make-a-health-bar-in-unity/ and the heart asset from https://opengameart.org/content/heart-2. The scripts I created are /scripts/health.cs, /scripts/healthBar.cs.
 
 For the checkpoints, I created /scripts/playerPosition.cs,  /scripts/checkPointDetect,  /scripts/checkPointSave and used the asset from https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780.
 
