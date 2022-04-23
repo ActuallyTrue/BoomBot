@@ -127,6 +127,8 @@ Credits:
 Asset Packs:
 - Snaps Art HD | Buried Memories Volume 2: Serekh: https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780
 - https://assetstore.unity.com/packages/3d/characters/robots/scifi-enemies-and-vehicles-15159
+- https://assetstore.unity.com/packages/2d/gui/icons/simple-modern-crosshairs-pack-1-79034
+- https://assetstore.unity.com/packages/3d/characters/robots/sci-fi-drones-90326
 - https://weeklyhow.com/how-to-make-a-health-bar-in-unity/
 - https://opengameart.org/content/heart-2
 
