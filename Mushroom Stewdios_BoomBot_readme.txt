@@ -122,3 +122,12 @@ C# Scripts I created/edited:
 /scripts/Lava.cs
 /scripts/pause.cs
 
+Credits:
+
+Asset Packs:
+- Snaps Art HD | Buried Memories Volume 2: Serekh: https://assetstore.unity.com/packages/templates/packs/snaps-art-hd-buried-memories-volume-2-serekh-145780
+- https://assetstore.unity.com/packages/3d/characters/robots/scifi-enemies-and-vehicles-15159
+- https://weeklyhow.com/how-to-make-a-health-bar-in-unity/
+- https://opengameart.org/content/heart-2
+
+Sounds:
