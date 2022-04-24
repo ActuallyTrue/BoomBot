@@ -1,4 +1,0 @@
-door close: https://freesound.org/people/primeval_polypod/sounds/156507/
-door open: https://freesound.org/people/NeoSpica/sounds/425090/
-button: https://freesound.org/people/JarredGibb/sounds/219477/
-pew: https://freesound.org/people/SeanSecret/sounds/440661/
