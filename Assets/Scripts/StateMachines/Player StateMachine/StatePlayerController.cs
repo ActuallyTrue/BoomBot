@@ -98,13 +98,7 @@ public class StatePlayerController : MonoBehaviour
     public void Blast()
     {
         float scale = 1f;
-        if (!Input.GetKey(KeyCode.LeftShift))
-        {
-            rb.AddForce(camera.transform.forward * blastForce, ForceMode.Impulse);
-        } else
-        {
-            scale = 1.5f;
-        }
+        rb.AddForce(camera.transform.forward * blastForce, ForceMode.Impulse);
         Detonate(scale);
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
         EventManager.TriggerEvent<Vector3>("explosionEvent", this.transform.position);
