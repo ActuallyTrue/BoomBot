@@ -37,8 +37,18 @@ For the explosions physics system, I created one function on the `/scripts/State
 For the audio and events manager, I made everything in the Events folder, and made two Prefabs, the EventManager as well as the 3DEventSound.
 
 C# Scripts I created/edited:
-/scripts/StateMachines/Player StateMachine/StateMachineController.cs
+Assets/Scripts/StateMachines/Player StateMachine/StatePlayerController.cs
+Assets/Events/Audio/AudioManager.cs
+Assets/Events/EventManager.cs
 
+
+Minor changes mostly dealing with sound:
+
+- Assets/Scripts/health.cs
+- Assets/Scripts/EnemyAI.cs
+- Assets/ShootProjectile.cs
+- Assets/Scripts/ActivateButton.cs
+- Assets/Scripts/OpenDoorButton.cs
 
 
 # Zehao Tan
@@ -134,3 +144,11 @@ Asset Packs:
 - https://opengameart.org/content/heart-2
 
 Sounds:
+- door close: https://freesound.org/people/primeval_polypod/sounds/156507/
+- door open: https://freesound.org/people/NeoSpica/sounds/425090/
+- button: https://freesound.org/people/JarredGibb/sounds/219477/
+- enemy pew: https://freesound.org/people/SeanSecret/sounds/440661/
+- BoomBot hit: https://freesound.org/people/jorickhoofd/sounds/160045/
+- footstep sound: https://freesound.org/people/Snapper4298/sounds/178187/
+- enemy death hiss: https://freesound.org/people/Zeval34/sounds/578484/
+- explosion: from milestone template
