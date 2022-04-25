@@ -74,7 +74,7 @@ For the checkpoints, I created /scripts/playerPosition.cs,  /scripts/checkPointD
 
 For the menu, I created /scripts/mainMenu.cs and /scripts/pause.cs. 
 
-Since the Alpha, I worked on making the story scene for which I created a new story scene where text object is shown at different intervals. I created the Assets/Scripts/storyNextScene.cs to take the user to the start menu after the story scene. I also created a menu which pops up when the player dies in Assets/Scripts/death.cs which gives them the option to restart at checkpoint or quit the game.
+Since the Alpha, I worked on making the story scene for which I created a new story scene where text object is shown at different intervals. I created the Assets/Scripts/storyNextScene.cs to take the user to the start menu after the story scene. I also created a menu which pops up when the player dies in Assets/Scripts/death.cs which gives them the option to restart at checkpoint or quit the game. I also added the credit functionality to the menu.
 
 C# Scripts I created/edited:
 /scripts/health.cs
