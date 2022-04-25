@@ -10,7 +10,7 @@ public class GameEnder : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             checkPointSave check = FindObjectOfType<checkPointSave>();
-            check.lastCheckpoint = new Vector3(187.18f, -0.12f, 100.5f);
+            check.lastCheckpoint = new Vector3(430.0484f, 0f, 415.8f);
             SceneManager.LoadScene(1);
         }
     }
